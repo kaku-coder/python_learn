@@ -1,18 +1,18 @@
-from pathlib import *
+content = "Python is easy to learn File handling is important I am practicing Python code"
 
-def showAllfileAndFolder():
-    path = path(" ")
+with open("sample.txt",'w') as f:
+    f.write(content)
+    print(f)
 
-def createFile():
-    pass
+with open ("sample.txt",'r') as f:
+    read = f.read()
+    print(read)
 
-print("press 1 for creating file")
-print("press 2 for reading file")
-print("press 3 for update file")
-print("press 4 for deletion file")
-
-
-check = int(input("please tell your response : "))
-
-if check == 1:
-    createFile()
+with open("sample.txt",'r')as f:
+    index = f.read()
+    print(index.find("f this is ${important}"))
+    print("important" in read)
+    
+with open("sample.txt",'w') as f:
+    replace_text = f.replace("python","java")
+    print(replace_text)
