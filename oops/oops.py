@@ -4,5 +4,11 @@ class Student:
         Self.name = name,
         Self.classes=classes
 
-class1_student = Student("prakash","first")
-print(class1_student.name,class1_student.classes)
+    def welcom(self):
+        print("welcom to my chennal",self.name)
+
+    def get_classes(self):
+        return self.classes
+class1_student = Student("rakesh","last")
+class1_student.welcom()
+print(class1_student.get_classes())
