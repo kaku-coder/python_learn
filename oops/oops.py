@@ -1,14 +1,9 @@
 from typing import Self
-class Student:
-    def __init__(Self,name,classes):
-        Self.name = name,
-        Self.classes=classes
+class Collage:
+    def __init__(self,name,classs):
+        self.name = name,
+        self.classs = classs
 
-    def welcom(self):
-        print("welcom to my chennal",self.name)
+user1 = Collage("prakash","12th")
 
-    def get_classes(self):
-        return self.classes
-class1_student = Student("rakesh","last")
-class1_student.welcom()
-print(class1_student.get_classes())
+print(user1.classs)
