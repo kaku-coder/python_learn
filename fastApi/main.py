@@ -1,9 +1,5 @@
-from os import name
-from fastapi import status
 from fastapi import FastAPI, HTTPException
-from typing import Optional
-from pydantic import BaseModel
-from fastApi.routes import form_validraton
+from routes import form_validraton
 
 app = FastAPI()
 app.include_router(form_validraton.router)

@@ -1,21 +1,25 @@
-import fastapi
+from fastapi import APIRouter
 from pydantic import BaseModel
 
-router = fastapi.APIRouter()
+router = APIRouter()
 
 
 class User(BaseModel):
-  name: str
-  age:int
-  email:str
+    name: str
+    age: int
+    email: str
 
 
-@router.post("/users") 
+users: list[User] = []
+
+
+@router.get("/users")
+def get_users():
+    return [user.model_dump() for user in users]
+
+
+@router.post("/users")
 def create_user(user: User):
-    return {
-        "name": user.name,
-        "age": user.age,
-        "email": user.email
-    }
-
+    users.append(user)
+    return user
 
