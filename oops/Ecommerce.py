@@ -20,8 +20,9 @@ class CreditCardPayment(Payment):
 
 # UPIPayment
 class UpiPayment(Payment):
-    def pay(self,processcingFees=0):
-        super().pay(self.amount)
+    def pay(self,discount=0):
+        processingfees = 0
+        super().pay(discount)
         print(self.amount)
 
 
